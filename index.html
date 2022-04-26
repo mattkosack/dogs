@@ -1,27 +1,17 @@
 
 <html>
-
-<head>
-    <meta charset="utf-8">
-    <script type="text/javascript"
-        src="https://cdn.jsdelivr.net/npm/brython@3.10.5/brython.min.js">
+<body>
+    <button onclick="show_image()">Click Me</button>
+    <script>
+        function show_image(alt) {
+            var img = document.createElement("img");
+            // set img.src to random file in images/ directory
+            img.src = "images/n02091467-Norwegian_elkhound/n02091467_92.jpg";
+            img.width = 150;
+            img.height = 150;
+            img.alt = alt;
+            document.body.appendChild(img);
+        }
     </script>
-    <script type="text/javascript"
-        src="https://cdn.jsdelivr.net/npm/brython@3.10.5/brython_stdlib.js">
-    </script>
-</head>
-
-<body onload="brython()">
-
-<script type="text/python">
-
-from browser import document
-
-document <= "Hello !"
-
-</script>
-
-
 </body>
-
 </html>
