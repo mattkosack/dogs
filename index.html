@@ -1,17 +1,14 @@
-
+<!DOCTYPE html>
 <html>
+    <head>
+        <script type="module">
+            import { Octokit } from "https://cdn.skypack.dev/@octokit/rest";
+        </script>
+        <script type="text/javascript" src="dogs.js"></script>
+    </head>
+
 <body>
-    <button onclick="show_image()">Click Me</button>
-    <script>
-        function show_image(alt) {
-            var img = document.createElement("img");
-            // set img.src to random file in images/ directory
-            img.src = "images/n02091467-Norwegian_elkhound/n02091467_92.jpg";
-            img.width = 150;
-            img.height = 150;
-            img.alt = alt;
-            document.body.appendChild(img);
-        }
-    </script>
+    <button onclick="show_image()"> Click Me </button>
 </body>
+
 </html>
