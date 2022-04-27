@@ -1,32 +1,26 @@
-function get_image_folders(link) {
-    fetch(link)
-    .then(response => response.json())
-    .then(data => {
-        return data
-    })
-    .catch(error => console.error(error))
+const link = "https://api.github.com/repos/mattkosack/dogs/contents/images";
+let data = null;
+
+function _set_random_image() {
+    folder = data[Math.floor(Math.random() * data.length)].url;
+    let img = document.getElementById("dog_image");
+    fetch(folder).then(response => response.json()).then(data2 => {
+        img.src = data2[Math.floor(Math.random() * data2.length)].download_url;
+        img.onload = () => {
+            //setTimeout(_set_random_image, 2500);
+        };
+    });
 }
 
-
-function get_random_image() {
-    let link = "https://api.github.com/repos/mattkosack/dogs/contents";
-    let folders = get_image_folders(link);
-    console.log(folders);
-
-    // var images = []
-    // var random_index = Math.floor(Math.random() * images.length);
-    // return images[random_index];
-    return "images/n02091467-Norwegian_elkhound/n02091467_92.jpg"
+function get_random_image(link) {
+    if (data !== null) { _set_random_image(); }
+    fetch(link).then(response => response.json()).then(data1 => {
+        data = data1;
+        _set_random_image();
+    });
 }
 
 
 function show_image() {
-    let img = document.createElement("img");
-    // set img.src to random file in images/directory
-    img.src = get_random_image();
-    // img.src = "images/n02091467-Norwegian_elkhound/n02091467_92.jpg";
-    img.width = 150;
-    img.height = 150;
-    // img.alt = alt;
-    document.body.appendChild(img);
+    get_random_image(link);
 }
