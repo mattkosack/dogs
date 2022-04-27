@@ -1,0 +1,16 @@
+
+body {
+    background: #f0f0f0;
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+
+button {
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    padding: 10px;
+    color: black;
+    margin: 0 auto;
+}

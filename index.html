@@ -1,15 +1,18 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <script type="module">
-            import { Octokit } from "https://cdn.skypack.dev/@octokit/rest";
-        </script>
+        <link rel="stylesheet" type="text/css" href="dogs.css" />
         <script type="text/javascript" src="dogs.js"></script>
     </head>
 
-<body onload="get_random_image(link);">
-    <button onclick="show_image()"> Click Me </button>
-    <img width="150" height="150" id="dog_image">
-</body>
-
+    <body onload="get_random_image(link);">
+        <div id="content">
+            <div>
+                <img width="300" height="300" id="dog_image">
+            </div>
+            <div> 
+                <button id="button" onclick="show_image();">New Dog</button>
+            </div>
+        </div>
+    </body>
 </html>
