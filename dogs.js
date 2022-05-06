@@ -20,7 +20,6 @@ function get_random_image(link) {
     });
 }
 
-
 function show_image() {
     get_random_image(link);
 }
