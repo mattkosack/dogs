@@ -3,6 +3,7 @@ let data = null;
 
 function _set_random_image() {
     folder = data[Math.floor(Math.random() * data.length)].url;
+    console.log(folder);
     let img = document.getElementById("dog_image");
     fetch(folder).then(response => response.json()).then(data2 => {
         img.src = data2[Math.floor(Math.random() * data2.length)].download_url;
