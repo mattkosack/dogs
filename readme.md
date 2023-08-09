@@ -16,7 +16,7 @@ Many blocks are commented out because we wanted to make sure our best models wou
 
 Also, the organization is horrible because we were trying so many different things and it would crash a lot, so when something worked we went with it and ignored lots of things.
 
-You can look at the doc pictures [here](https://mattkosack.github.io/dogs)
+You can look at the dog pictures [here](https://mattkosack.github.io/dogs)
 (I'm using the github api to request random images, but because of this structure it uses 2 api calls per click. Without an api key you only get 60 calls, so you'll only get 30 dogs per hour. Eventually this should be hosted somewhere else, but GitHub Pages is free.)
 
-Also, [this is where the pics came from](https://www.kaggle.com/datasets/jessicali9530/stanford-dogs-dataset)
+Also, [this is where the pics came from](http://vision.stanford.edu/aditya86/ImageNetDogs/)
